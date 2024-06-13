@@ -1,11 +1,24 @@
+<!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
+    <title>360&deg; Image Gallery</title>
+    <meta name="description" content="360&deg; Image Gallery - A-Frame">
+    <!-- If running this example without a local copy of A-Frame, replace this next line with:
+    <script src="https://aframe.io/releases/<release_number>/aframe.min.js"></script>
+    -->
     <script src="https://aframe.io/releases/1.5.0/aframe.min.js"></script>
-    <link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
+    <script src="https://unpkg.com/aframe-template-component@3.x.x/dist/aframe-template-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-layout-component@4.x.x/dist/aframe-layout-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-event-set-component@5.x.x/dist/aframe-event-set-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-proxy-event-component@2.1.0/dist/aframe-proxy-event-component.min.js"></script>
   </head>
   <body>
     <a-scene>
-        <a-sky src="360.jpg"></a-sky>
+        <a-assets>
+          <img id="sky" src="/assets/images/portfolio/360.jpg">
+        </a-assets>
+        <a-sky src="#sky"></a-sky>
       </a-scene>
   </body>
 </html>
